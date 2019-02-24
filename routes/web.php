@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', '/login', 301);
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home');
