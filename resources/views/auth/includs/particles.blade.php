@@ -7,7 +7,8 @@
    */
   $(document).on('theme:init', () =>
   {
+    var path = '{{ asset('vendor/particles/demo/particles.json') }}';
     /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-      particlesJS.load('auth-header', 'vendor/particles/demo/particles.json');
+      particlesJS.load('auth-header', path);
   })
 </script> <!-- END PLUGINS JS -->

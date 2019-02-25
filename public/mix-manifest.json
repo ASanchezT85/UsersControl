@@ -1,6 +1,6 @@
 {
-    "/js/theme.min.js": "/js/theme.min.js",
-    "/css/theme.min.css": "/css/theme.min.css",
-    "/css/theme-dark.min.css": "/css/theme-dark.min.css",
-    "/css/custom.css": "/css/custom.css"
+    "/js/dashboard-demo.js": "/js/dashboard-demo.js?id=c85d23e536b6e9c6277d",
+    "/js/theme.min.js": "/js/theme.min.js?id=a097b9366d788ddc42a2",
+    "/css/theme-dark.min.css": "/css/theme-dark.min.css?id=5cd47f8b88c9eecd2954",
+    "/css/custom.css": "/css/custom.css?id=b1b430945baaa54cdd71"
 }

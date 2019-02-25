@@ -26,6 +26,7 @@
         "vue-template-compiler": "^2.6.7"
     },
     "dependencies": {
-        "particles.js": "^2.0.0"
+        "particles.js": "^2.0.0",
+        "stacked-menu": "^1.1.12"
     }
 }

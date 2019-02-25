@@ -1,11 +1,20 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
+<header id="auth-header" class="auth-header">
+    <h1>
+        <img src="{{ asset('png/brand-inverse.png') }}" alt="" height="72"> 
+        <span class="sr-only">{{ __('Sign In') }}</span>
+    </h1>
+    <p> {{ __('Already have an account? please') }} 
+        <a href="{{ route('login') }}">{{ __('Enter here') }}</a>
+    </p>
+</header>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+                <div class="card-header text-center">{{ __('Verify Your Email Address') }}</div>
 
                 <div class="card-body">
                     @if (session('resent'))
@@ -21,4 +30,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+@include('auth.includs.particles')
 @endsection
