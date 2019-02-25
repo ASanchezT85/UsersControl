@@ -14,4 +14,11 @@
 Route::redirect('/', '/login', 301);
 Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');;
+Route::middleware(['auth', 'verified'])->group(function() {
+
+    //Interfaz
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('logout', 'Auth\LoginController@logout');
+
+});
+

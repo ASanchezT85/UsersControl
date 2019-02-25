@@ -4,8 +4,4 @@
 <script src="{{ asset('vendor/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
 <script src="{{ asset('vendor/flatpickr/flatpickr.min.js') }}"></script>
 <script src="{{ asset('vendor/easy-pie-chart/dist/jquery.easypiechart.min.js') }}"></script>
-<script src="{{ asset('vendor/chart-js/src/chart.js') }}"></script> <!-- END PLUGINS JS -->
-
-<!-- BEGIN PAGE LEVEL JS -->
-<script src="{{ mix('js/dashboard-demo.js') }}"></script> 
-<!-- END PAGE LEVEL JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script> <!-- END PLUGINS JS -->

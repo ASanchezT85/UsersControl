@@ -144,7 +144,7 @@
                                 <!-- .dropdown-item -->
                                 <a href="#" class="dropdown-item">
                                     <div class="user-avatar">
-                                        <img src="{{ asset('avatars/team3.jpg') }}" alt="">
+                                        <img src="{{ asset('avatars/team3.png') }}" alt="">
                                     </div>
                                     <div class="dropdown-item-body">
                                         <p class="subject"> Openlane </p>
@@ -229,9 +229,7 @@
                                 <span class="dropdown-icon oi oi-person"></span> 
                                 {{ __('Profile') }}
                             </a> 
-                            <a class="dropdown-item" href="{{ route('logout') }}" 
-                               onclick="event.preventDefault();
-                               document.getElementById('logout-form').submit();">
+                            <a class="dropdown-item" href="{{ route('logout') }}">
                                 <span class="dropdown-icon oi oi-account-logout"></span> 
                                 {{ __('Logout') }}
                             </a>
