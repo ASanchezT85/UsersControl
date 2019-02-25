@@ -39,8 +39,9 @@
         @yield('content')
         
         <!-- copyright -->
-        <footer class="auth-footer"> © 2018 {{ __('All Rights Reserved.') }} 
-            <a href="#">{{ __('Privacy') }}</a> {{ __('and') }} <a href="#">{{ __('Terms') }}</a>
+        <footer class="auth-footer text-center"> © 2018 {{ __('All Rights Reserved.') }}
+            <br>
+            <a href="#">{{ __('Terms') }}</a> {{ __('and') }} <a href="#">{{ __('Conditions') }}</a>
         </footer>
 
     </main>

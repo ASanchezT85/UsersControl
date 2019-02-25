@@ -7,7 +7,7 @@
         <span class="sr-only">{{ __('Sign In') }}</span>
     </h1>
     <p> {{ __('Already have an account? please') }} 
-        <a href="{{ route('login') }}">{{ __('Login') }}</a>
+        <a href="{{ route('login') }}">{{ __('Enter here') }}</a>
     </p>
 </header>
 <form method="POST" action="{{ route('register') }}" class="auth-form">
