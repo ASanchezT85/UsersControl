@@ -11,5 +11,8 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/theme.min.js', 'public/js/theme.min.js')
+   .styles('resources/css/theme-dark.min.css', 'public/css/theme-dark.min.css')
+   .styles('resources/css/custom.css', 'public/css/custom.css');
+
+   

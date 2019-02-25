@@ -9,15 +9,22 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Begin SEO tag - Favicons -->
+    @include('layouts.includs.seo')
+    @include('layouts.includs.favicon')
+    <!-- End SEO tag - Favicons-->
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet"><!-- End Google font -->
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- BEGIN PLUGINS STYLES -->
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.css">
+    <!-- END PLUGINS STYLES -->
+
+    <!-- BEGIN THEME STYLES -->
+    @include('layouts.includs.styles')
+    <!-- END BEGIN THEME STYLES -->
+
 </head>
 <body>
     <div id="app">
@@ -76,5 +83,8 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
