@@ -12,10 +12,12 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/theme.min.js', 'public/js/theme.min.js').version()
-    .js('resources/js/dashboard-demo.js', 'public/js/dashboard-demo.js').version()
-    .styles('resources/css/theme-dark.min.css', 'public/css/theme-dark.min.css')
-    .styles('resources/css/custom.css', 'public/css/custom.css')
-    .copyDirectory('node_modules/stacked-menu', 'vendor/stacked-menu');
+   .js('resources/js/app.js', 'public/js/app.js').version()
+   .js('resources/vendor/SmartWizard/js/smartwizard.js', 'public/js/smartwizard.js').version()
+   .styles('resources/css/theme-dark.min.css', 'public/css/theme-dark.min.css')
+   .styles('resources/css/custom.css', 'public/css/custom.css')
+   .styles('resources/vendor/SmartWizard/css/smartwizard.css', 'public/css/smartwizard.css')
+   .copyDirectory('node_modules/stacked-menu', 'vendor/stacked-menu');
    
 
    

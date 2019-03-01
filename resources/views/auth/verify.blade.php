@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appv')
 
 @section('content')
 <header id="auth-header" class="auth-header">
@@ -6,9 +6,6 @@
         <img src="{{ asset('png/brand-inverse.png') }}" alt="" height="72"> 
         <span class="sr-only">{{ __('Sign In') }}</span>
     </h1>
-    <p> {{ __('Already have an account? please') }} 
-        <a href="{{ route('login') }}">{{ __('Enter here') }}</a>
-    </p>
 </header>
 <div class="container">
     <div class="row justify-content-center">

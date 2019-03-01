@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Users\Profile;
+use Illuminate\Support\Collection;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user_id = auth()->user()->id;
+        $profile = Profile::where('user_id', $user_id)->first();
+        if(is_null($profile)){
+            return redirect()->route('profile.index');
+        }
+        
         return view('home');
     }
 }

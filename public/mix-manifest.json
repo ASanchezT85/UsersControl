@@ -1,6 +1,8 @@
 {
-    "/js/dashboard-demo.js": "/js/dashboard-demo.js?id=c85d23e536b6e9c6277d",
+    "/js/app.js": "/js/app.js?id=0cf56eebc81bd9891b22",
+    "/js/smartwizard.js": "/js/smartwizard.js?id=d13302be2e45e786d49a",
     "/js/theme.min.js": "/js/theme.min.js?id=a097b9366d788ddc42a2",
     "/css/theme-dark.min.css": "/css/theme-dark.min.css?id=5cd47f8b88c9eecd2954",
-    "/css/custom.css": "/css/custom.css?id=b1b430945baaa54cdd71"
+    "/css/custom.css": "/css/custom.css?id=b1b430945baaa54cdd71",
+    "/css/smartwizard.css": "/css/smartwizard.css?id=aeb1168f98797e40a760"
 }

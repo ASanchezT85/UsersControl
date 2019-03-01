@@ -12,7 +12,11 @@
             <!-- .top-bar-item -->
             <div class="top-bar-item px-2 d-md-none d-lg-none d-xl-none">
                 <!-- toggle menu -->
-                <button class="hamburger hamburger-squeeze" type="button" data-toggle="aside" aria-label="toggle menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button> <!-- /toggle menu -->
+                <button class="hamburger hamburger-squeeze" type="button" data-toggle="aside" aria-label="toggle menu">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button> <!-- /toggle menu -->
             </div>
             <!-- /.top-bar-item -->
             <!-- .top-bar-item -->
@@ -35,8 +39,11 @@
                 <ul class="header-nav nav">
                     <!-- .nav-item -->
                     <li class="nav-item dropdown header-nav-dropdown has-notified">
-                        <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="oi oi-pulse"></span></a>
-                        <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                        <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="oi oi-pulse"></span>
+                        </a>
+                        <div class="dropdown-arrow"></div>
+                        <!-- .dropdown-menu -->
                         <div class="dropdown-menu dropdown-menu-rich dropdown-menu-right">
                             <h6 class="dropdown-header stop-propagation">
                                 <span>Activities <span class="badge">(2)</span></span>
@@ -212,11 +219,19 @@
                 <div class="dropdown">
                     <button class="btn-account d-none d-md-flex" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="user-avatar user-avatar-md">
-                            <img src="{{ asset('avatars/profile.jpg') }}" alt="">
+                            @isset(Auth::user()->profile)
+                                <img src="{{ Auth::user()->profile->avatar }}" alt="">
+                            @else
+                                <img src="{{ asset('avatars/default.png') }}" alt="">
+                            @endisset
                         </span> 
                         <span class="account-summary pr-lg-4 d-none d-lg-block">
                             <span class="account-name">{{ Auth::user()->name }}</span> 
-                            <span class="account-description">Marketing Manager</span>
+                            <span class="account-description">
+                                @isset(Auth::user()->profile)
+                                    {{ Auth::user()->profile->studies }}
+                                @endisset
+                            </span>
                         </span>
                     </button>
                     <div class="dropdown-arrow dropdown-arrow-left"></div>
@@ -225,7 +240,7 @@
                             <h6 class="dropdown-header d-none d-md-block d-lg-none"> 
                                 {{ Auth::user()->name }} 
                             </h6>
-                            <a class="dropdown-item" href="user-profile.html">
+                            <a class="dropdown-item" href="{{ route('profile.index') }}">
                                 <span class="dropdown-icon oi oi-person"></span> 
                                 {{ __('Profile') }}
                             </a> 

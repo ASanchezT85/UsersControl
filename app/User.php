@@ -8,6 +8,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Caffeinated\Shinobi\Models\Role;
+use App\Models\Users\Profile;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -33,5 +34,14 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function roles(){
         return $this->belongsToMany(Role::class)->withTimestamps();
+    }
+
+    /**
+     * Profile has one user.
+     *
+     * @return Model
+     */
+    public function profile(){
+        return $this->hasOne(Profile::class);
     }
 }
